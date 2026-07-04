@@ -13,7 +13,7 @@ A modern, responsive, and visually polished **Domino's Landing Page** built usin
 
 > Replace the image below with your final project screenshot.
 
-![Landing Page Preview](landing-page.png)
+![Landing Page Preview](WebDev-L1-LandingPage/landing-page.png)
 
 ---
 
