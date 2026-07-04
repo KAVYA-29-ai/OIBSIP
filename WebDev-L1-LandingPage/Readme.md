@@ -9,14 +9,6 @@ A modern, responsive, and visually polished **Domino's Landing Page** built usin
 
 ---
 
-# 📸 Landing Page Preview
-
-> Replace the image below with your final project screenshot.
-
-![Landing Page Preview](landing-page.png)
-
----
-
 # 🚀 Features
 
 - ✅ Sticky Navigation Bar
