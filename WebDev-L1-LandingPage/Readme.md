@@ -1,60 +1,66 @@
-# 🍕 Domino's Landing Page
+# 🍕 Domino's Premium Landing Page
 
-A modern, responsive, and visually polished **Domino's Landing Page** built using **HTML5** and **CSS3**. This project was created as **Level 1 - Task 1** for the **Oasis Infobyte Web Development & Design Internship**.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
+![Oasis Infobyte](https://img.shields.io/badge/Oasis%20Infobyte-Internship-orange?style=for-the-badge)
+
+A modern, responsive, and visually polished **Domino's Landing Page** built using **HTML5** and **CSS3** as part of **Level 1 - Task 1** for the **Oasis Infobyte Web Development & Design Internship**.
 
 ---
 
-## 📸 Landing Page Preview
+# 📸 Landing Page Preview
 
-> Add your website screenshot inside the `screenshots` folder and update the path below.
+> Replace the image below with your final project screenshot.
 
 ![Landing Page Preview](landing-page.png)
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
 - ✅ Sticky Navigation Bar
-- ✅ Responsive Hero Section
+- ✅ Hero Section
 - ✅ Call-to-Action Buttons
 - ✅ Statistics Section
 - ✅ Featured Pizza Cards
-- ✅ Modern Dark UI
-- ✅ Glassmorphism Effects
 - ✅ Responsive Layout
-- ✅ Clean Typography
+- ✅ Modern Dark UI
+- ✅ Glassmorphism Design
+- ✅ Professional Typography
 - ✅ Footer with Navigation Links
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling & Layout |
-| CSS Grid | Responsive Layout |
-| Flexbox | Component Alignment |
-| Google Fonts (Poppins & Inter) | Typography |
-| Material Symbols | Icons |
+| HTML5 | Structure of the webpage |
+| CSS3 | Styling and responsiveness |
+| CSS Grid | Responsive page layout |
+| Flexbox | Alignment and spacing |
+| Google Fonts | Poppins & Inter typography |
+| Material Symbols | Modern UI Icons |
 
 ---
 
-## 🎨 UI Highlights
+# 🎨 UI Highlights
 
-- Premium Dark Theme
-- Modern Glassmorphism Design
-- Smooth Hover Effects
-- Gradient Buttons
-- Responsive Design
-- Clean Visual Hierarchy
-- Professional Color Palette
+- 🌑 Premium Dark Theme
+- 🍕 Modern Domino's Concept
+- ✨ Glassmorphism Effects
+- 🎯 Responsive Design
+- 🎨 Consistent Color Palette
+- 🖋️ Clean Typography
+- 🚀 Smooth Hover Effects
+- 📱 Mobile Friendly Layout
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
+```text
 WebDev-L1-LandingPage/
 │
 ├── index.html
@@ -64,31 +70,35 @@ WebDev-L1-LandingPage/
 
 ---
 
-## 🎯 Assignment Objectives Covered
+# ✅ Assignment Requirements Covered
 
-- ✔ Sticky Navigation Bar
+- ✔ Fixed / Sticky Navigation Bar
 - ✔ Hero Section
 - ✔ Two Content Sections
 - ✔ Footer
-- ✔ Responsive Layout
+- ✔ Responsive Design
 - ✔ HTML5
 - ✔ CSS3
-- ✔ Professional UI Design
 - ✔ Consistent Color Palette
 - ✔ Clean Typography
+- ✔ Mobile Friendly Layout
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Kavya Rajput**
 
-B.Tech AI & Data Science
+🎓 B.Tech Artificial Intelligence & Data Science
 
-Oasis Infobyte Web Development & Design Intern
+💼 Oasis Infobyte Web Development & Design Intern
+
+🔗 GitHub: https://github.com/KAVYA-29-ai
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project was created for educational purposes as part of the **Oasis Infobyte Internship Program**.
+This project was developed for educational purposes as part of the **Oasis Infobyte Internship Program**.
+
+⭐ If you like this project, don't forget to give it a star!
