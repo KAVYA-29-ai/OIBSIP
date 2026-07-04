@@ -85,7 +85,7 @@ WebDev-L1-LandingPage/
 
 💼 Oasis Infobyte Web Development & Design Intern
 
-🔗 GitHub: https://github.com/KAVYA-29-ai
+🔗 GitHub: [https://github.com/KAVYA-29-ai](https://github.com/KAVYA-29-ai/OIBSIP)
 
 ---
 
