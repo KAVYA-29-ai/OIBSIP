@@ -1,4 +1,4 @@
-# 🍕 Domino's  Landing Page
+# 🍕 Domino's Landing Page
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -13,7 +13,7 @@ A modern, responsive, and visually polished **Domino's Landing Page** built usin
 
 > Replace the image below with your final project screenshot.
 
-![Landing Page Preview](WebDev-L1-LandingPage/landing-page.png)
+![Landing Page Preview](landing-page.png)
 
 ---
 
