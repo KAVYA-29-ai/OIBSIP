@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #ff5545;
+      --bg: #131317;
+      --surface: #201f23;
+      --text: #e5e1e6;
+      --text-muted: #ad8883;
+      --glass: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(19, 19, 23, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      text-decoration: none;
+      color: var(--text);
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn-order {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255, 85, 69, 0.3);
+      white-space: nowrap;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 80px;
+      padding: 120px 0;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 85, 69, 0.15) 0%, transparent 70%);
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+    .hero-content h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 64px;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff5545 0%, #c0000a 100%);
+      color: white;
+      padding: 18px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 18px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-image-container {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+      border: 1px solid var(--border);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding: 60px 40px;
+      background: var(--surface);
+      border-radius: 32px;
+      border: 1px solid var(--border);
+      margin-bottom: 120px;
+    }
+
+    .stat-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat-icon {
+      color: var(--primary);
+      font-size: 32px !important;
+      margin-bottom: 8px;
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .featured {
+      padding-bottom: 120px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 60px;
+    }
+
+    .subtitle {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .pizza-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .pizza-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .pizza-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+    }
+
+    .pizza-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pizza-card h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+    }
+
+    .pizza-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+      height: 44px;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .add-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--surface);
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 80px;
+    }
+
+    .footer-logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      max-width: 300px;
+    }
+
+    .footer-links h6 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 30px;
+      }
+      
+      .hero {
+        gap: 40px;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+      }
+
+      .pizza-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      nav {
+        padding: 15px 0;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-content h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+      }
+
+      .hero-content p {
+        margin: 0 auto 32px;
+      }
+
+      .hero-btns {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-image-container {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 20px;
+        margin-bottom: 80px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .section-header h2 {
+        font-size: 32px;
+      }
+
+      .pizza-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-desc {
+        max-width: 100%;
+      }
+
+      footer {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav>
+<div class="container nav-container">
+<a class="logo" href="#"><span class="">DOMINO'S</span> PREMIUM</a>
+<ul class="nav-links">
+<li><a href="#">Menu</a></li>
+<li><a href="#">Ingredients</a></li>
+<li><a href="#">Offers</a></li>
+<li><a href="#">Locations</a></li>
+</ul>
+<button class="btn-order">Order Now</button>
+</div>
+</nav>
+<main class="container">
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<h1>HANDCRAFTED PIZZA. CRAFTED FOR EVERY CRAVING.</h1>
+<p>Fresh ingredients, artisanal dough, and the same iconic speed you love. Experience the next level of Domino's.</p>
+<div class="hero-btns">
+<a class="btn-primary" href="#">Order Delivery <span class="material-symbols-outlined">arrow_forward</span></a>
+<a class="btn-secondary" href="#">View Menu</a>
+</div>
+</div>
+<div class="hero-image-container">
+<div class="hero-image">
+<img alt="Domino's Premium Pizza" src="https://lh3.googleusercontent.com/aida/AP1WRLu2kpXEn70GYv4M1YDguZLOVuYYjzpgICTXxViXTwkPBMWMoym1A6gzhRLJ-p6le8z0UM1t0-IIiwj_z84q7vBgabG-rqhlijvpOCcKsbJ4sIprvugLcNAYixy8NxTl7vh-jlamnAXoNJFR-vkkWit3muUjdxV9LQPwCcWQmaeAqAQrMKZ-1J8p-aunqwuj1dWkW2YQRZI7kT8KWZftbfhWsCop07kBpHEqU0uhFhpCjHfUDd9P0oa6880"/>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="stats">
+<div class="stat-item">
+<span class="material-symbols-outlined stat-icon">shopping_basket</span>
+<div class="stat-number">2M+</div>
+<div class="stat-label">Pizzas Daily</div>
+</div>
+<div class="stat-item">
+<span class="material-symbols-outlined stat-icon">shutter_speed</span>
+<div class="stat-number">30m</div>
+<div class="stat-label">Delivery Goal</div>
+</div>
+<div class="stat-item">
+<span class="material-symbols-outlined stat-icon">distance</span>
+<div class="stat-number">1.5K+</div>
+<div class="stat-label">Store Locations</div>
+</div>
+<div class="stat-item">
+<span class="material-symbols-outlined stat-icon">star</span>
+<div class="stat-number">4.9</div>
+<div class="stat-label">Service Rating</div>
+</div>
+</section>
+<!-- Featured Pizzas -->
+<section class="featured">
+<div class="section-header">
+<div>
+<span class="subtitle">Freshly Made</span>
+<h2>OUR TOP PICKS</h2>
+</div>
+<a href="#" style="color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+          See Full Menu <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
+</a>
+</div>
+<div class="pizza-grid">
+<!-- Margherita -->
+<div class="pizza-card">
+<img alt="Margherita Royal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwCjQq70JaKIscggeHB5mxvfzP8aMAX5T0I0ow9Z4oRJrGKUQSI1R2uEEZGUSRFZYoHwmZypZlM9g9yWpf_f-Q88begQpud1lsAamiH07o4loS4NDkF8yR8aOgZaEra25hFfr5jHPjhWyea-R0-S0YzYwc0H3dM4jfOZvcoQ3IAitncqfrs1EjdC_h5pmWE9bEBdU0eSqDsW2PQ8P3ykmFGV78_sUW7kFGYTs9GoFiarPcBa7GD5a_CHQSnv-yFZt8WcMGbNqntwmE"/>
+<h4>Margherita Royal</h4>
+<p>Classic tomato sauce, fresh buffalo mozzarella, and basil pearls.</p>
+<div class="card-footer">
+<span class="price">₹249</span>
+<button class="add-btn"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+<!-- Pepperoni -->
+<div class="pizza-card">
+<img alt="Pepperoni Feast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Y8-9BY5Z7SWOHCRkV87GA5gRTnr8M-UspJSKu6K3_oLfy36bZ3V9Je2cLpTnWE70q3oZM_5xsToRnrr6rkA17cljeAZZ3PCtWB9sM0TZyKQA_Mx6sNvmmTyrVvD6COhXG-VE1cJrL-L2RnWIM9FDabY_XnRZQdTJjj72XcOEyh6zlQ6rAUB1Mebgdr4h0J4bQHs5AgMusnKM1eLObN9tQtazwsdQPZsOhudatvOrxQSy7yZsPwkAQa1TYQk6y_Z9WzCkib3coR5K"/>
+<h4>Pepperoni Feast</h4>
+<p>Double portion of crispy pepperoni with a blend of four cheeses.</p>
+<div class="card-footer">
+<span class="price">₹349</span>
+<button class="add-btn"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+<!-- Farmhouse -->
+<div class="pizza-card">
+<img alt="Garden Fresh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9PHhkx4dZV7Ap33qjNxI5r4LxrBytLoU7zLwjJJx8V06hwn6Hv34XtrKn-Rh5q_8CdNP_T4h6RIG2gUyNBGC381vFI_YEDgJQjHRVKwwBk732IecWFnSavDFmbk9QnLfVjovkZpTheCf-wNM8JiuNR5oK73Jz3y0l-TAGlpZeM7PrI_LLdOVti5MSQV3uw84gBTNEQVibB7RpHFaLN4I7IeMzsaukp1km27TKi0iDDxgcaPCjSII1gq6bYcBqh73hSKEXYfdACtcz"/>
+<h4>Garden Fresh</h4>
+<p>Roasted mushrooms, peppers, onions, and sweet corn on thin crust.</p>
+<div class="card-footer">
+<span class="price">₹299</span>
+<button class="add-btn"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+<!-- Veg Luxe -->
+<div class="pizza-card">
+<img alt="Ultimate Veggie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCKlAyMigWqjI_POosUElm2D4NLLW47JGeGju8pPvfXvTA0v6lf1l7YMhfakRqa8_DVzHtRkUUd0D9Fp0l8SkJGTg6fs2ZWN5x4AxedooCt68TN0s7sAeR4ulU-Io_J-DWhGXR7MJpGds9sIfXPQKBUsrU7KmoGF6DWWBjVBMHzmSNwc2qhRoALtf8N3OajeDVso4A_V0NWyEq1o6HQjx5vaOs0LCjiyKb7XXfEkjE7n4q1P8oie4L1zbBhH72YVnZVfZeih_YV4gg"/>
+<h4>Ultimate Veggie</h4>
+<p>Olives, jalapeños, and artisanal paneer with spicy tomato sauce.</p>
+<div class="card-footer">
+<span class="price">₹279</span>
+<button class="add-btn"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div>
+<div class="footer-logo">DOMINO'S PREMIUM</div>
+<p class="footer-desc">Delicious, handcrafted pizza delivered to your door in 30 minutes or less. Quality you can taste, speed you can trust.</p>
+</div>
+<div class="footer-links">
+<h6>Menu</h6>
+<ul>
+<li><a href="#">Popular Pizzas</a></li>
+<li><a href="#">Sides &amp; Drinks</a></li>
+<li><a href="#">Custom Pizza</a></li>
+<li><a href="#">Nutrition</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h6>Support</h6>
+<ul>
+<li><a href="#">Track Order</a></li>
+<li><a href="#">Store Finder</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h6>Company</h6>
+<ul>
+<li><a href="#">Our Story</a></li>
+<li><a href="#">Careers</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
